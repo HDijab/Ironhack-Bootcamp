@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+    <% @items.each do |list| %>
+      <h1><%= list %></h1>
+    <% end %>
+  <form action="/item" method="post">
+    <input type="text" name="item">
+    <input type="Submit" value="Send">
+  </form>
+</body>
+</html>
