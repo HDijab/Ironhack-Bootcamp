@@ -1,4 +1,4 @@
-class SaveLoad
+module SaveLoad
   def save(result)
     IO.write('./public/saved_result.txt', result)
   end

@@ -1,22 +1,21 @@
+require 'pry'
 require 'sinatra'
 require 'sinatra/reloader'
-require './lib/calculator'
-require './lib/save_load'
+require './lib/logic'
 
 get '/' do
   erb :index
 end
 
 post '/calculation' do
-  unless params[:operator] == nil
   args = {
-    first_number: params[:first_number].to_f,
-    second_number: params[:second_number].to_f,
-    operator: params[:operator].to_sym
+    first_number: params[:first_number],
+    second_number: params[:second_number],
+    operator: params[:operator],
+    saved_result: params[:saved_result],
+    load_result: params[:load_result]
   }
-  end
-  @result = Calculator.new(args).calculate unless args == nil
-  SaveLoad.new.save(params[:saved_result]) unless params[:saved_result] == nil
-  @load = SaveLoad.new.load unless params[:load_result] == nil
+  logic = Logic.new(args)
+  @result = logic.action
   erb :index
 end
