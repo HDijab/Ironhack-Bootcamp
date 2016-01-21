@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To-Do List</title>
+</head>
+<body>
+  <h1>Welcome to the To-Do List</h1>
+  <div>
+  <% @tasks.each do |task| %>
+    <% if task.complete? %>
+      <p><strike><%= task.content %></strike></p>
+      <a href="/delete_task/<%= task.id %>">DELETE</a>
+    <% else %>
+      <p><%= task.content %></p>
+      <a href="/complete_task/<%= task.id %>">COMPLETE</a>
+      <a href="/delete_task/<%= task.id %>">DELETE</a>
+    <% end %>
+  <% end %>
+  </div>
+  <a href="/new_task">ADD NEW TASK</a>
+</body>
+</html>
