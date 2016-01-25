@@ -1,7 +1,8 @@
 class Cell
-  def initialize(state, neighbours)
-    @state = state # either 1 or 0 for alive or dead
-    @neighbours = neighbours # an array that represents the surrounding cells
+  attr_reader :state
+  def initialize(state)
+    @state = state
+    @neighbours = []
   end
 
   def alive?
@@ -22,6 +23,10 @@ class Cell
     else
       return 1
     end
+  end
+
+  def ping_neighbours
+    
   end
 
   def count_neighbours
