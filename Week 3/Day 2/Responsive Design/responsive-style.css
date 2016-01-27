@@ -1,0 +1,34 @@
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.row {
+	margin-left: -20px;
+}
+
+.makeitbig {
+  font-size: 4em;
+}
+
+/*contains the string "span"*/
+[class*="span"] {
+	display: inline;
+	float: left;
+	margin-left: 20px;
+  padding-top: 20px;
+  border-bottom: 2px solid grey;
+}
+
+@media only screen and (min-width: 768px) {
+  .span-one-third {
+      width: 30%;
+  }
+  .container {
+    width: 940px;
+  }
+}
