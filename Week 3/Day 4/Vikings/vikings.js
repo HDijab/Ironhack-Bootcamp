@@ -27,7 +27,13 @@ function pitFight(viking1, viking2) {
   function turn(attacker, attackee) {
     if (chance(attacker.accuracy)) {
       attackee.takeDamage(Math.floor((attacker.strength)));
+      console.log(attacker.name + ' swings his weapon...');
       console.log(attackee.name + ' took a hit!');
+      console.log(attackee.name + ' has ' + attackee.health + ' hp left!');
+      console.log('\n')
+    } else {
+      console.log(attacker.name + ' swings his weapon...');
+      console.log(attacker.name + ' misses!');
       console.log(attackee.name + ' has ' + attackee.health + ' hp left!');
       console.log('\n')
     };
@@ -44,6 +50,6 @@ function pitFight(viking1, viking2) {
 };
 
 var george = new Viking('george');
-var bob = new Saxon();
+var bob = new Viking('bob');
 
 pitFight(george, bob)
