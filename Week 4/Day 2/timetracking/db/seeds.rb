@@ -22,7 +22,7 @@ Entry.create hours: 5, minutes: 25, comments: 'Hello', project_id: 4
 Entry.create hours: 7, minutes: 32, comments: 'Hello', project_id: 5
 Entry.create hours: 9, minutes: 24, comments: 'Hello', project_id: 6
 Entry.create hours: 1, minutes: 13, comments: 'Hello', project_id: 7
-Entry.create hours: 0, minutes: 53, comments: 'Hello', project_id: 8
+Entry.create hours: 0, minutes: 60, comments: 'Hello', project_id: 8
 
 Entry.create hours: 3, minutes: 42, comments: 'Hello', project_id: 1
 Entry.create hours: 6, minutes: 54, comments: 'Hello', project_id: 2
@@ -31,4 +31,4 @@ Entry.create hours: 2, minutes: 52, comments: 'Hello', project_id: 4
 Entry.create hours: 4, minutes: 23, comments: 'Hello', project_id: 5
 Entry.create hours: 5, minutes: 42, comments: 'Hello', project_id: 6
 Entry.create hours: 2, minutes: 31, comments: 'Hello', project_id: 7
-Entry.create hours: 1, minutes: 35, comments: 'Hello', project_id: 8
+Entry.create hours: 1, minutes: 60, comments: 'Hello', project_id: 8
