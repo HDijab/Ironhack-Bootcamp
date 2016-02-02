@@ -1,0 +1,20 @@
+<table>
+  <thead>
+    <tr>
+      <th>Avatar</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Phone Number</th>
+      <th>Email Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= link_to image_tag(@contact.avatar.url), @contact.avatar.url %></td>
+      <td><%= @contact.name %></td>
+      <td><%= @contact.address %></td>
+      <td><%= @contact.phone_number %></td>
+      <td><%= @contact.email_address %></td>
+    </tr>
+  </tbody>
+</table>
