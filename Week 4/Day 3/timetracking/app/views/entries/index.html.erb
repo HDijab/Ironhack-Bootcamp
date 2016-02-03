@@ -1,0 +1,22 @@
+<h1>Entries for project: <%= @project.name %></h1>
+<% if @project.description != nil%>
+<p>Description: <%= @project.description %></p>
+<% end %>
+<% @entries.each_with_index do |entry, index| %>
+<ul>
+  <p>Entry: <%= index + 1 %></p>
+  <li>
+    Comments: <%= entry.comments %>
+  </li>
+  <li>
+    Hours: <%= entry.hours %>
+  </li>
+  <li>
+    Minutes: <%= entry.minutes %>
+  </li>
+  <li>
+    Created At: <%= entry.created_at %>
+  </li>
+</ul>
+<% end %>
+<a href="/projects/<%= @project.id%>">Go to project</a>

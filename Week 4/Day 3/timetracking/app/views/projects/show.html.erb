@@ -1,0 +1,5 @@
+<h1>Project: <%= @project.name %></h1>
+<p><%= @project.description %></p>
+<p>Total time spent on project in the last month: <%= @hours %> Hours - <%= @minutes %> Minutes</p>
+<a href="/projects/<%= @project.id - 1 %>">Previous</a> <a href="/projects/<%= @project.id + 1 %>">Next</a>
+<a href="/projects/<%= @project.id%>/entries">Show Entries</a>
