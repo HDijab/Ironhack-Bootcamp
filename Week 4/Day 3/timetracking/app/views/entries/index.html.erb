@@ -4,7 +4,7 @@
 <% end %>
 <% @entries.each_with_index do |entry, index| %>
 <ul>
-  <p>Entry: <%= index + 1 %></p>
+  <p>Entry: <%= index + 1 %> <%= link_to("Edit", edit_project_entry_path(@project, entry))%></p>
   <li>
     Comments: <%= entry.comments %>
   </li>
@@ -15,8 +15,9 @@
     Minutes: <%= entry.minutes %>
   </li>
   <li>
-    Created At: <%= entry.created_at %>
+    Date: <%= entry.date %>
   </li>
 </ul>
 <% end %>
-<a href="/projects/<%= @project.id%>">Go to project</a>
+<%= link_to("Go to project", project_path(@project)) %>
+<%= link_to("Create new entry", new_project_entry_path) %>
