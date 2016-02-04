@@ -1,5 +1,7 @@
 class Project < ActiveRecord::Base
   has_many :entries
+  has_many :participations
+  has_many :people, through: :participations
   validates :name, presence: true, uniqueness: true, length: {maximum: 30}, format: {without: /[^[:alnum:]|\s]/}
 
   def self.ordered_by_creation(amount=10)

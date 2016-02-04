@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
   root 'site#home'
   get '/contact' => 'site#contact'
+
   resources :projects, only: [:index, :show, :new, :create] do
     resources :entries, except: [:show]
   end
+
+  resources :people
+
+  patch '/people/:id/projects' => 'people#associate_project', as: :associate_project
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
