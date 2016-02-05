@@ -1,0 +1,13 @@
+<div class="sidebar">
+<h3>Concerts later this month</h3>
+<table>
+  <tbody>
+    <% this_months_concerts.each do |concert| %>
+      <tr>
+        <td><%= link_to concert.artist, concert %></td>
+        <td><%= (concert.date).strftime("%e %b, %y") %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>

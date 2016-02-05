@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Artist:</strong>
+  <%= @concert.artist %>
+</p>
+
+<p>
+  <strong>Venue:</strong>
+  <%= @concert.venue %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @concert.city %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= (@concert.date).strftime("%e %b, %y") %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= number_to_currency(@concert.price) %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @concert.description %>
+</p>
+
+<%= link_to 'Back', concerts_path %>
+
+<%= form_for [@concert, @comment], url: concert_comments_path(@concert) do |f| %>
+<% f.label :content%>
+<%= f.text_field :content%>
+<%= f.submit 'Add a comment'%>
+<% end %>
+
+<%unless @comments.empty?%>
+<p>Comments:</p>
+<%@comments.each do |comment|%>
+<p><%= comment.content %></p>
+<% end %>
+<% end %>

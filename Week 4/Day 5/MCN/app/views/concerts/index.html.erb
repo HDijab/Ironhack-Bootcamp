@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Concerts</h1>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Artist</th>
+      <th>Venue</th>
+      <th>City</th>
+      <th>Date</th>
+      <th>Price</th>
+      <th>Description</th>
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @concerts.each do |concert| %>
+      <tr>
+        <td><%= concert.artist %></td>
+        <td><%= concert.venue %></td>
+        <td><%= concert.city %></td>
+        <td><%= (concert.date).strftime("%e %b, %y") %></td>
+        <td><%= number_to_currency(concert.price) %></td>
+        <td><%= concert.description %></td>
+        <td><%= link_to 'Show', concert %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= form_for find_by_price_path, method: 'get' do |f| %>
+<%f.label :price%>
+<%=f.search_field :price%>
+<%=f.submit 'Search by price'%>
+<% end %>
+
+<%= link_to 'New Concert', new_concert_path %>
