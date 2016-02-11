@@ -2,17 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Spotify</title>
+  <title>Spotify Artist Search</title>
+  <link rel="icon" href="//d2c87l0yth4zbw-2.global.ssl.fastly.net/i/_global/favicon.png">
   <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="search_term.js"></script>
+  <script src="search_manager.js"></script>
   <script src="script.js"></script>
   <link rel="stylesheet" href="style.css">
+  <script src="live.js"></script>
 </head>
 <body>
-  <h1>Spotify Artist Search</h1>
+  <header>
+    <h1>Spotify Artist Search</h1>
+  </header>
   <form>
     <label for="search">Search By:</label>
     <input type="search" id="search" placeholder="Artist">
     <input type="submit" value="Submit">
   </form>
+  <div id="results">
+    
+  </div>
 </body>
 </html>

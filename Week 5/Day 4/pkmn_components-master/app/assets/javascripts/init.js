@@ -1,0 +1,1 @@
+window.PokemonApp = window.PokemonApp || {};

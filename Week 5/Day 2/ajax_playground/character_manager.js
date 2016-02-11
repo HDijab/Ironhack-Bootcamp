@@ -9,6 +9,7 @@
 
   CharacterManager.prototype.addCharacters = function (characters) {
     var manager = this;
+    debugger
     characters.forEach(function (character) {
       var character = new StarWars.Character(character);
       manager.characters.push(character);
