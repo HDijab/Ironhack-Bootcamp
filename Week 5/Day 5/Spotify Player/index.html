@@ -1,0 +1,66 @@
+<html>
+	<head>
+		<title>Spotify Player</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<script src="view.js"></script>
+		<script src="modal.js"></script>
+		<script src="control.js"></script>
+		<script src="search.js"></script>
+		<script src="script.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+
+	<body>
+		<div class="widget">
+			<form id="searchform">
+				<label for="searchbar">Search</label>
+				<input type="search" id="searchbar" placeholder="Song Name...">
+				<input type="submit" value="Search">
+			</form>
+
+			<div class="header">
+				<div class="btn-play"></div>
+
+				<div class="metadata">
+				  <p class="title">Hunger of The Pine</p>
+
+				  <p class="author">alt-J</p>
+
+				  <div class="seekbar">
+				    <progress value="0" max="30"></progress>
+				  </div>
+				</div>
+			</div>
+
+			<div class="cover">
+				<img src="https://i.scdn.co/image/04da6dfc1f5f45fdeba938a0cc71cf372524fd43">
+			</div>
+
+			<audio src="https://p.scdn.co/mp3-preview/8e9c5ffdc38e91659bfe8b6bd44650dfc25a3d31"></audio>	
+		</div>
+
+		<div class="modal fade js-modal">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <!-- Close button -->
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span>&times;</span>
+		        </button>
+
+		        <h2>Hello</h2>
+		      </div>
+
+		      <div class="modal-body">
+		        <dl>
+		        	<dt>title</dt>
+		        	<dd>description</dd>
+		        </dl>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+	</body>
+</html>
