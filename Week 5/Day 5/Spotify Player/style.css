@@ -120,6 +120,7 @@ img {
 
 .author {
   font-weight: normal;
+  cursor: pointer;
 }
 
 .seekbar {

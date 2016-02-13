@@ -1,9 +1,12 @@
 $(function(){
-  var Search = window.SpotifyApp.Search($('#searchbar'));
-  var Control = window.SpotifyApp.Control();
-  var Modal = window.SpotifyApp.Modal();
+  var generateView = window.SpotifyApp.View().generate;
+  var handleControls = window.SpotifyApp.Control().handle;
+  var showModal = window.SpotifyApp.Modal().show;
+  var readProgress = window.SpotifyApp.Progress().read;
+
   
-  $('#searchform').on('submit', Search.song);
-  $('.btn-play').on('click', Control.handle);
-  $('.author').on('click', Modal.show);
+  $('#searchform').on('submit', generateView);
+  $('.btn-play').on('click', handleControls);
+  $('.author').on('click', showModal);
+  $('progress').on('mousemove', readProgress);
 });
