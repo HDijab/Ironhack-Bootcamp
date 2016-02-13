@@ -42,7 +42,7 @@
       handle: handle,
       restartPlayback: restartPlayback,
       updateProgress: updateProgress,
-      buttonState: buttonState
+      buttonDisabled: buttonDisabled
     };
     return functions;
   }
