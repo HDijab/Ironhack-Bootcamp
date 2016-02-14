@@ -30,6 +30,7 @@
       changeTimeIndicator('0');
       $('.btn-play').removeClass('playing');
       $('.btn-play').removeClass('disabled');
+      $('progress').tooltip();
     }
 
     function updateProgress(current) {
