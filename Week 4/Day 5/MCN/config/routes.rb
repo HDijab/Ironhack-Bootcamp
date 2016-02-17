@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  root 'site#index'
+  root 'users#home'
+  get '/home' => 'site#index'
+  get '/signup' => 'users#new'
+  post '/signup' => 'users#create'
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  delete '/login' => 'sessions#destroy'
   get '/find_by_price/:price' => 'concerts#find_by_price', as: :find_by_price
   resources :concerts do
     resources :comments, only: :create

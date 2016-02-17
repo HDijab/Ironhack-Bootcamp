@@ -9,6 +9,9 @@
 <body>
 <nav>
   <%= link_to 'Home', root_path%>
+  <% unless current_user.nil? %>
+  <%= link_to 'Log Out', '/login', method: 'delete' %>
+  <% end %>
 </nav>
 <%= render 'shared/sidebar' %>
 <%= yield %>
