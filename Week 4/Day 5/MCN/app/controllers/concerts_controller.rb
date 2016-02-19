@@ -1,6 +1,7 @@
 class ConcertsController < ApplicationController
   before_action :set_concert, only: [:show, :edit, :update, :destroy]
-
+  before_action :authorize_user, only: [:show, :index]
+  before_action :admin_only, except: [:show, :index]
   def index
     @concerts = Concert.all.order("date ASC")
   end

@@ -7,8 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<% flash.each do |key, msg|%>
+  <%= content_tag :div, msg, id: key, style: 'color: red;' %>
+<% end %>
 <nav>
-  <%= link_to 'Home', root_path%>
+  <%= link_to 'Home', '/home'%>
+  <%= link_to 'Main Page', root_path%>
   <% unless current_user.nil? %>
   <%= link_to 'Log Out', '/login', method: 'delete' %>
   <% end %>
